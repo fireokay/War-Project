@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7728840386504493350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ambience.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Studio/War FMOD/Build/Desktop/ambience.bank
+  Name: ambience
+  StudioPath: bank:/ambience
+  lastModified: 638156328443561586
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3727376546803174828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638156328443739110
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2644044435437458845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soldier/soldier_c1_machine_gun
+  m_EditorClassIdentifier: 
+  Path: event:/soldier/soldier_c1_machine_gun
+  Guid:
+    Data1: -1291338761
+    Data2: 1286134684
+    Data3: -1060065628
+    Data4: 1775557532
+  Banks:
+  - {fileID: -2429043544098220890}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3050
+--- !u!114 &-2429043544098220890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/soldier.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Studio/War FMOD/Build/Desktop/soldier.bank
+  Name: soldier
+  StudioPath: bank:/soldier
+  lastModified: 638156328444111641
+  FileSizes: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 6269527640474494556}
+  - {fileID: -3727376546803174828}
+  - {fileID: -7728840386504493350}
+  - {fileID: 5161416422754606850}
+  - {fileID: -2429043544098220890}
+  EditorEvents:
+  - {fileID: 8770320594547145590}
+  - {fileID: 396688051690843672}
+  - {fileID: -2644044435437458845}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -3727376546803174828}
+  StringsBanks:
+  - {fileID: 6269527640474494556}
+  cacheTime: 638156328444111641
+  cacheVersion: 131601
+--- !u!114 &396688051690843672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemy/enemy_c1_machine_gun
+  m_EditorClassIdentifier: 
+  Path: event:/enemy/enemy_c1_machine_gun
+  Guid:
+    Data1: 99387369
+    Data2: 1083821873
+    Data3: -1069292648
+    Data4: 849214773
+  Banks:
+  - {fileID: 5161416422754606850}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11000
+--- !u!114 &5161416422754606850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/enemy.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Studio/War FMOD/Build/Desktop/enemy.bank
+  Name: enemy
+  StudioPath: bank:/enemy
+  lastModified: 638156328443931635
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6269527640474494556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638156328443761611
+  FileSizes:
+  - Name: 
+    Value: 1024
+  Exists: 1
+--- !u!114 &8770320594547145590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience/amb_c1_sea
+  m_EditorClassIdentifier: 
+  Path: event:/ambience/amb_c1_sea
+  Guid:
+    Data1: 805152086
+    Data2: 1276449223
+    Data3: -1523300467
+    Data4: -1669132768
+  Banks:
+  - {fileID: -7728840386504493350}
+  - {fileID: -3727376546803174828}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 100
+  Length: 104099
