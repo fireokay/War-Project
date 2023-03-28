@@ -184,10 +184,11 @@ GameObject:
   - component: {fileID: 4704118336845736157}
   - component: {fileID: 7190363157868615654}
   - component: {fileID: 2598309022768875926}
-  - component: {fileID: 4218808113989290537}
   - component: {fileID: 6732974073147061418}
   - component: {fileID: 4311968535915178011}
   - component: {fileID: 93119444069452907}
+  - component: {fileID: 5301518782370846065}
+  - component: {fileID: 8536099400990527446}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -274,21 +275,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4218808113989290537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5314248676753823229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fcbb50b43f2d54f9a5ebaa38896e2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToDestroy: 0
-  floatingText: {fileID: 493725776330619646}
-  machineGunner: 0
 --- !u!198 &6732974073147061418
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5084,3 +5070,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5301518782370846065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314248676753823229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b225b5724982348b3855e65ef080b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8536099400990527446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314248676753823229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe18c7039adb6743b6c95f96b855db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToDestroy: 0

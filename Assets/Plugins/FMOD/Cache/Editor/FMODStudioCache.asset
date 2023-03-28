@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/ambience.bank
   Name: ambience
   StudioPath: bank:/ambience
-  lastModified: 638156328443561586
+  lastModified: 638156404479994195
   FileSizes: []
   Exists: 1
 --- !u!114 &-3727376546803174828
@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638156328443739110
+  lastModified: 638156404480172273
   FileSizes: []
   Exists: 1
 --- !u!114 &-2644044435437458845
@@ -78,7 +78,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/soldier.bank
   Name: soldier
   StudioPath: bank:/soldier
-  lastModified: 638156328444111641
+  lastModified: 638156404480543848
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -108,7 +108,7 @@ MonoBehaviour:
   - {fileID: -3727376546803174828}
   StringsBanks:
   - {fileID: 6269527640474494556}
-  cacheTime: 638156328444111641
+  cacheTime: 638156404480543848
   cacheVersion: 131601
 --- !u!114 &396688051690843672
 MonoBehaviour:
@@ -152,7 +152,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/enemy.bank
   Name: enemy
   StudioPath: bank:/enemy
-  lastModified: 638156328443931635
+  lastModified: 638156404480363817
   FileSizes: []
   Exists: 1
 --- !u!114 &6269527640474494556
@@ -170,7 +170,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638156328443761611
+  lastModified: 638156404480187274
   FileSizes:
   - Name: 
     Value: 1024

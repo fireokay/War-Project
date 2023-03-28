@@ -5,6 +5,8 @@ using UnityEngine.Pool;
 
 public class UnitSpawner : MonoBehaviour
 {
+    public GameObject unitPrefab;
+    public GameObject unitMachineGunnerPrefab;
     public GameObject objectPrefab;
     ObjectPool<GameObject> objectPool;
     private bool usePool;
@@ -12,6 +14,9 @@ public class UnitSpawner : MonoBehaviour
     public int spawningZoneX = 0;
     public int spawningZoneZ = 0;
     public UnitManager unitManager;
+
+    public int minDeathBorder;
+    public int maxDeathBorder;
 
     // Start is called before the first frame update
     void Start()
@@ -53,27 +58,47 @@ public class UnitSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        GameObject unit = usePool ? objectPool.Get() : Instantiate(objectPrefab);
-        unit.transform.SetParent(transform);
-        unit.name = "Soldier " + Random.Range(0, 1000);
-        int dividerToGroups = Random.Range(0, 10);
-        if (dividerToGroups <= 6)
+        GameObject unit;
+        if (Random.Range(1, 10) <= 3)
         {
-            unit.GetComponent<Unit>().SetTimeToDestroy(Random.Range(3, 10));
-        } 
-        else if (dividerToGroups >= 10)
-        {
-            unit.GetComponent<Unit>().SetTimeToDestroy(Random.Range(30, 40));
+            unit = usePool ? objectPool.Get() : Instantiate(unitMachineGunnerPrefab);
         }
         else
         {
-            unit.GetComponent<Unit>().SetTimeToDestroy(Random.Range(10, 20));
+            unit = usePool ? objectPool.Get() : Instantiate(unitPrefab);
         }
+        unit.transform.SetParent(transform);
+        DecideLifeLongevity(unit);
+
         int x = Random.Range(-spawningZoneX, spawningZoneX);
-        int z = Random.Range(-spawningZoneX, spawningZoneZ);
+        int z = Random.Range(-spawningZoneZ, spawningZoneZ);
         unit.transform.localPosition = new Vector3(0, 0, 0);
         unit.transform.localPosition = unit.transform.localPosition + new Vector3(x, 0, z);
+
         unitManager.AddUnit(unit.GetComponent<Unit>());
+    }
+
+    void DecideLifeLongevity(GameObject unit)
+    {
+        int dividerToGroups = Random.Range(0, 10);
+        if (dividerToGroups <= minDeathBorder)
+        {
+            int timeToDestroy = Random.Range(3, 10);
+            unit.GetComponent<Unit>().SetTimeToDestroy(timeToDestroy);
+            unit.name = "Soldier " + timeToDestroy;
+        }
+        else if (dividerToGroups >= maxDeathBorder)
+        {
+            int timeToDestroy = Random.Range(30, 40);
+            unit.GetComponent<Unit>().SetTimeToDestroy(timeToDestroy);
+            unit.name = "Soldier " + timeToDestroy;
+        }
+        else
+        {
+            int timeToDestroy = Random.Range(10, 20);
+            unit.GetComponent<Unit>().SetTimeToDestroy(timeToDestroy);
+            unit.name = "Soldier " + timeToDestroy;
+        }
     }
     void OnDrawGizmos()
     {

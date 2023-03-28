@@ -5,17 +5,7 @@ using TMPro;
 
 public class Unit : MonoBehaviour
 {
-    public float timeToDestroy;
-    public GameObject floatingText;
-    public bool machineGunner = false;
-    private void Start()
-    {
-        int x = Random.Range(0, 100);
-        if (x <= 50)
-        {
-            gameObject.AddComponent<UnitMachineGunner>();
-        }
-    }
+    public float TimeToDestroy;
     public IEnumerator Move(Vector3 aimCoordinates, float speed)
     {
         float time = 0f;
@@ -37,7 +27,7 @@ public class Unit : MonoBehaviour
 
     public void SetTimeToDestroy(float time)
     {
-        timeToDestroy = time;
-        floatingText.GetComponent<TextMeshPro>().text = "" + timeToDestroy;
+        TimeToDestroy = time;
+        gameObject.GetComponentInChildren<TextMeshPro>().text = "" + TimeToDestroy;
     }
 }

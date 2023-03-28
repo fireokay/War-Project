@@ -25,12 +25,11 @@ public class UnitManager : MonoBehaviour
 
     public IEnumerator RandomTimer(Unit unit)
     {
-        yield return new WaitForSeconds(unit.timeToDestroy);
+        yield return new WaitForSeconds(unit.TimeToDestroy);
         if (units.Count > 0)
         {
-            Unit unitToDestroy = units[Random.Range(0, units.Count - 1)];
-            units.Remove(unitToDestroy);
-            Destroy(unitToDestroy.gameObject);
+            units.Remove(unit);
+            Destroy(unit.gameObject);
         }
     }
     void OnDrawGizmos()
