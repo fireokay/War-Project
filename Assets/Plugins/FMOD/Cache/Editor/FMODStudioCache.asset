@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8964535422361265531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemy/enemy_c1_danger_sniper_tracer
+  m_EditorClassIdentifier: 
+  Path: event:/enemy/enemy_c1_danger_sniper_tracer
+  Guid:
+    Data1: 1820105916
+    Data2: 1307372529
+    Data3: -1790706291
+    Data4: 1004015832
+  Banks:
+  - {fileID: 5161416422754606850}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-8721640676707633144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemy/enemy_c1_danger_sniper_shot
+  m_EditorClassIdentifier: 
+  Path: event:/enemy/enemy_c1_danger_sniper_shot
+  Guid:
+    Data1: -981379691
+    Data2: 1078222568
+    Data3: -698866508
+    Data4: -138286001
+  Banks:
+  - {fileID: 5161416422754606850}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 750
+--- !u!114 &-8247233043389122335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/vehicle/boat/boat_door
+  m_EditorClassIdentifier: 
+  Path: event:/vehicle/boat/boat_door
+  Guid:
+    Data1: 619081399
+    Data2: 1300282347
+    Data3: 1568013755
+    Data4: -161729845
+  Banks:
+  - {fileID: 8112998937773701578}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-7728840386504493350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,9 +96,63 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/ambience.bank
   Name: ambience
   StudioPath: bank:/ambience
-  lastModified: 638156404479994195
+  lastModified: 638158088360300785
   FileSizes: []
   Exists: 1
+--- !u!114 &-6615135606823528035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/enemy/enemy_c1_danger_machgun
+  m_EditorClassIdentifier: 
+  Path: event:/enemy/enemy_c1_danger_machgun
+  Guid:
+    Data1: -169225294
+    Data2: 1279517921
+    Data3: 223489682
+    Data4: -457856463
+  Banks:
+  - {fileID: 5161416422754606850}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &-5125176094601454352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soldier/soldier_c1_war_scream
+  m_EditorClassIdentifier: 
+  Path: event:/soldier/soldier_c1_war_scream
+  Guid:
+    Data1: -1356296776
+    Data2: 1241619721
+    Data3: 60685241
+    Data4: -1425360958
+  Banks:
+  - {fileID: -2429043544098220890}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5500
 --- !u!114 &-3727376546803174828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,7 +168,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638156404480172273
+  lastModified: 638158088360693441
   FileSizes: []
   Exists: 1
 --- !u!114 &-2644044435437458845
@@ -78,7 +213,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/soldier.bank
   Name: soldier
   StudioPath: bank:/soldier
-  lastModified: 638156404480543848
+  lastModified: 638158088360941288
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -99,16 +234,23 @@ MonoBehaviour:
   - {fileID: -7728840386504493350}
   - {fileID: 5161416422754606850}
   - {fileID: -2429043544098220890}
+  - {fileID: 8112998937773701578}
   EditorEvents:
   - {fileID: 8770320594547145590}
   - {fileID: 396688051690843672}
   - {fileID: -2644044435437458845}
+  - {fileID: -5125176094601454352}
+  - {fileID: 7290537975370390721}
+  - {fileID: -8247233043389122335}
+  - {fileID: -6615135606823528035}
+  - {fileID: -8721640676707633144}
+  - {fileID: -8964535422361265531}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3727376546803174828}
   StringsBanks:
   - {fileID: 6269527640474494556}
-  cacheTime: 638156404480543848
+  cacheTime: 638158088361108822
   cacheVersion: 131601
 --- !u!114 &396688051690843672
 MonoBehaviour:
@@ -152,7 +294,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/enemy.bank
   Name: enemy
   StudioPath: bank:/enemy
-  lastModified: 638156404480363817
+  lastModified: 638158088360500854
   FileSizes: []
   Exists: 1
 --- !u!114 &6269527640474494556
@@ -170,10 +312,55 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638156404480187274
+  lastModified: 638158088360715943
   FileSizes:
   - Name: 
-    Value: 1024
+    Value: 1368
+  Exists: 1
+--- !u!114 &7290537975370390721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soldier/soldier_c1_footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/soldier/soldier_c1_footsteps
+  Guid:
+    Data1: -58317919
+    Data2: 1135241894
+    Data3: 295126427
+    Data4: 678064636
+  Banks:
+  - {fileID: -2429043544098220890}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &8112998937773701578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/vehicle.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD Studio/War FMOD/Build/Desktop/vehicle.bank
+  Name: vehicle
+  StudioPath: bank:/vehicle
+  lastModified: 638158088361108822
+  FileSizes: []
   Exists: 1
 --- !u!114 &8770320594547145590
 MonoBehaviour:
