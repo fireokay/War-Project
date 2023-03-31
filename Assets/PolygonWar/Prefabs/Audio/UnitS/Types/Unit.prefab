@@ -10085,6 +10085,7 @@ MonoBehaviour:
   IsMoving: 0
   footstepsTriggerZone: {fileID: 3272338651808278415}
   deathParticleSystem: {fileID: 8484882834266512919}
+  sniperTracerTriggerZone: {fileID: 8275482565179359028}
 --- !u!1 &7150157595512921628
 GameObject:
   m_ObjectHideFlags: 0

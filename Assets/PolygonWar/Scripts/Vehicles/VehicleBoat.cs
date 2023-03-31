@@ -16,7 +16,6 @@ public class VehicleBoat : MonoBehaviour
         {
             PlayBoatDoor();
         }
-        Debug.Log("opening door");
         float time = 0f;
         Vector3 start = new Vector3(door.transform.rotation.x, 0, 0);
         float totalTime = Vector3.Distance(start, new Vector3(rotateDoorDegree, door.transform.position.y, door.transform.position.z)) / 10;
@@ -31,7 +30,6 @@ public class VehicleBoat : MonoBehaviour
             }
             yield return null;
         }
-        Debug.Log("finished ^_^");
     }
 
     public void PlayBoatDoor()

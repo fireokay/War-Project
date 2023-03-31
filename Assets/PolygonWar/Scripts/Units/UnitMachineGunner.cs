@@ -14,10 +14,6 @@ public class UnitMachineGunner : MonoBehaviour
     {
         StartCoroutine(RandomShots());
     }
-    private void Update()
-    {
-        
-    }
     public IEnumerator RandomShots()
     {
         if (machinegunTriggerZone.InHearingZone == true)

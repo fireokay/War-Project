@@ -16,6 +16,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private bool IsMoving = false;
     [SerializeField] private CheckTriggerZone footstepsTriggerZone;
     public ParticleSystem deathParticleSystem;
+    [SerializeField] public CheckTriggerZone sniperTracerTriggerZone;
     private void Start()
     {
         timeFootsteps = _timeBetweenFootsteps;

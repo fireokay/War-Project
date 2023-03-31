@@ -9,13 +9,17 @@ public class UnitSubmachineGunner : MonoBehaviour
 {
     public TextMeshPro textMeshPro;
     [SerializeField] private StudioEventEmitter submachineGunEmitter;
+    [SerializeField] private CheckTriggerZone submachinegunTriggerZone;
     public void Start()
     {
         StartCoroutine(RandomShots());
     }
     public IEnumerator RandomShots()
     {
-        PlaySubmachineGunShots();
+        if (submachinegunTriggerZone.InHearingZone == true)
+        {
+            PlaySubmachineGunShots();
+        }
         yield return new WaitForSeconds(Random.Range(2, 4));
         StartCoroutine(RandomShots());
     }

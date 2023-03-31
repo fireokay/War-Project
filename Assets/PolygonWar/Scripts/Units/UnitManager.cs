@@ -25,7 +25,11 @@ public class UnitManager : MonoBehaviour
         yield return new WaitForSeconds(unit.TimeToDestroy);
         if (units.Count > 0)
         {
-            unit.PlaySniperTracerSound();
+            Debug.Log(unit.sniperTracerTriggerZone);
+            if (unit.sniperTracerTriggerZone.InHearingZone)
+            {
+                unit.PlaySniperTracerSound();
+            }
 
             unit.GetComponent<ParticleSystem>().Stop();
             unit.deathParticleSystem.Play();
