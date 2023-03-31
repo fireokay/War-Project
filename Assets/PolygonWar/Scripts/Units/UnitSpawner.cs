@@ -7,6 +7,7 @@ public class UnitSpawner : MonoBehaviour
 {
     public GameObject unitPrefab;
     public GameObject unitMachineGunnerPrefab;
+    public GameObject unitSubmachineGunnerPrefab;
     public GameObject objectPrefab;
     ObjectPool<GameObject> objectPool;
     private bool usePool;
@@ -59,12 +60,18 @@ public class UnitSpawner : MonoBehaviour
     public void Spawn()
     {
         GameObject unit;
-        if (Random.Range(1, 10) <= 3)
+        int random = Random.Range(1, 10);
+        if (random <= 3)
         {
             unit = usePool ? objectPool.Get() : Instantiate(unitMachineGunnerPrefab);
         }
-        else
+        else if (random > 3 && random <= 5)
         {
+
+            unit = usePool ? objectPool.Get() : Instantiate(unitSubmachineGunnerPrefab);
+        } 
+        else 
+        { 
             unit = usePool ? objectPool.Get() : Instantiate(unitPrefab);
         }
 

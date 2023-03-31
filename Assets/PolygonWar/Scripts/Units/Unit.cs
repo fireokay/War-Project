@@ -13,15 +13,17 @@ public class Unit : MonoBehaviour
     [SerializeField] private StudioEventEmitter footstepsEmitter;
     [SerializeField] private StudioEventEmitter sniperTracerEmitter;
     [SerializeField] private StudioEventEmitter sniperShotEmitter;
-    [SerializeField] public bool InHearingZone = false;
     [SerializeField] private bool IsMoving = false;
+    [SerializeField] private CheckTriggerZone footstepsTriggerZone;
+    public ParticleSystem deathParticleSystem;
     private void Start()
     {
         timeFootsteps = _timeBetweenFootsteps;
+        deathParticleSystem.Stop();
     }
     private void Update()
     {
-        if (_timeBetweenFootsteps <= 0 && InHearingZone && IsMoving)
+        if (_timeBetweenFootsteps <= 0 && footstepsTriggerZone.InHearingZone && IsMoving)
         {
             PlayAndStopFootsteps();
             _timeBetweenFootsteps = timeFootsteps;

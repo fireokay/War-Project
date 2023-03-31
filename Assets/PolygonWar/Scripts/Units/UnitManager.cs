@@ -9,9 +9,6 @@ public class UnitManager : MonoBehaviour
     public Vector3 aimCoordinates;
     public int aimZoneX = 0;
     public int aimZoneZ = 0;
-    private void Start()
-    {
-    }
     public void AddUnit(Unit unit)
     {
         units.Add(unit);
@@ -29,6 +26,11 @@ public class UnitManager : MonoBehaviour
         if (units.Count > 0)
         {
             unit.PlaySniperTracerSound();
+
+            unit.GetComponent<ParticleSystem>().Stop();
+            unit.deathParticleSystem.Play();
+            yield return new WaitForSeconds(1);
+            unit.deathParticleSystem.Stop();
             yield return new WaitForSeconds(1);
             units.Remove(unit);
             Destroy(unit.gameObject);

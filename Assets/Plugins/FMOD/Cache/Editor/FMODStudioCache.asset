@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/ambience.bank
   Name: ambience
   StudioPath: bank:/ambience
-  lastModified: 638158088360300785
+  lastModified: 638158211332217975
   FileSizes: []
   Exists: 1
 --- !u!114 &-6615135606823528035
@@ -168,7 +168,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638158088360693441
+  lastModified: 638158211332635550
   FileSizes: []
   Exists: 1
 --- !u!114 &-2644044435437458845
@@ -213,9 +213,36 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/soldier.bank
   Name: soldier
   StudioPath: bank:/soldier
-  lastModified: 638158088360941288
+  lastModified: 638158211332917768
   FileSizes: []
   Exists: 1
+--- !u!114 &-274240994021118076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/soldier/soldier_c1_submachine_gun
+  m_EditorClassIdentifier: 
+  Path: event:/soldier/soldier_c1_submachine_gun
+  Guid:
+    Data1: 1470344114
+    Data2: 1313924497
+    Data3: 1240176802
+    Data4: 1521433618
+  Banks:
+  - {fileID: -2429043544098220890}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 875
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,12 +272,13 @@ MonoBehaviour:
   - {fileID: -6615135606823528035}
   - {fileID: -8721640676707633144}
   - {fileID: -8964535422361265531}
+  - {fileID: -274240994021118076}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3727376546803174828}
   StringsBanks:
   - {fileID: 6269527640474494556}
-  cacheTime: 638158088361108822
+  cacheTime: 638158211333095312
   cacheVersion: 131601
 --- !u!114 &396688051690843672
 MonoBehaviour:
@@ -294,7 +322,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/enemy.bank
   Name: enemy
   StudioPath: bank:/enemy
-  lastModified: 638158088360500854
+  lastModified: 638158211332433032
   FileSizes: []
   Exists: 1
 --- !u!114 &6269527640474494556
@@ -312,10 +340,10 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638158088360715943
+  lastModified: 638158211332650542
   FileSizes:
   - Name: 
-    Value: 1368
+    Value: 1412
   Exists: 1
 --- !u!114 &7290537975370390721
 MonoBehaviour:
@@ -359,7 +387,7 @@ MonoBehaviour:
   Path: ../FMOD Studio/War FMOD/Build/Desktop/vehicle.bank
   Name: vehicle
   StudioPath: bank:/vehicle
-  lastModified: 638158088361108822
+  lastModified: 638158211333095312
   FileSizes: []
   Exists: 1
 --- !u!114 &8770320594547145590

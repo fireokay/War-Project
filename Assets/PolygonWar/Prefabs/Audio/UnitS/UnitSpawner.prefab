@@ -49,13 +49,15 @@ MonoBehaviour:
     type: 3}
   unitMachineGunnerPrefab: {fileID: 5314248676753823229, guid: 9894d6758f510784294331877df00f90,
     type: 3}
+  unitSubmachineGunnerPrefab: {fileID: 5314248676753823229, guid: fad168a84f2522148a0f3b13fe290c53,
+    type: 3}
   objectPrefab: {fileID: 0}
-  spawnRemaining: 3
-  spawningZoneX: 3
-  spawningZoneZ: 3
+  spawnRemaining: 1
+  spawningZoneX: 4
+  spawningZoneZ: 4
   unitManager: {fileID: 4266953069265919254}
-  minDeathBorder: 1
-  maxDeathBorder: 2
+  minDeathBorder: 5
+  maxDeathBorder: 9
 --- !u!114 &4266953069265919254
 MonoBehaviour:
   m_ObjectHideFlags: 0
