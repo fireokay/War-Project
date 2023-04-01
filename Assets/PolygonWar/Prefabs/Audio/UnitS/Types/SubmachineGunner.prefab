@@ -5090,7 +5090,7 @@ GameObject:
   - component: {fileID: 4311968535915178011}
   - component: {fileID: 93119444069452907}
   - component: {fileID: 1043136100345527491}
-  - component: {fileID: 5556177604254040105}
+  - component: {fileID: 3213639657976840960}
   m_Layer: 0
   m_Name: SubmachineGunner
   m_TagString: Untagged
@@ -9998,7 +9998,8 @@ MonoBehaviour:
   footstepsTriggerZone: {fileID: 6599012902473423907}
   deathParticleSystem: {fileID: 3185724020575408050}
   sniperTracerTriggerZone: {fileID: 164726746437253937}
---- !u!114 &5556177604254040105
+  unitSpawner: {fileID: 0}
+--- !u!114 &3213639657976840960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10007,12 +10008,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5314248676753823229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57f0eeb793051644a7a88f6357006af, type: 3}
+  m_Script: {fileID: 11500000, guid: 54266ba2e6c2e6940a65ebeced950ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 9090120499703934289}
-  machineGunEmitter: {fileID: 797929010999171491}
-  machinegunTriggerZone: {fileID: 4780562717689035784}
+  _shooterEmitter: {fileID: 797929010999171491}
+  _triggerZone: {fileID: 4780562717689035784}
 --- !u!1 &5348546568006412878
 GameObject:
   m_ObjectHideFlags: 0

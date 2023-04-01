@@ -1,10 +1,12 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using TMPro;
 
 public class UnitSpawner : MonoBehaviour
 {
+    public List<Unit> units = new();
     public GameObject unitPrefab;
     public GameObject unitMachineGunnerPrefab;
     public GameObject unitSubmachineGunnerPrefab;
@@ -15,7 +17,7 @@ public class UnitSpawner : MonoBehaviour
     private float progressTimeToSpawn;
     public int spawningZoneX = 0;
     public int spawningZoneZ = 0;
-    public UnitManager unitManager;
+    public Vector3 aimCoordinates;
 
     public int minDeathBorder;
     public int maxDeathBorder;
@@ -28,11 +30,8 @@ public class UnitSpawner : MonoBehaviour
 
     void Update()
     {
-        if (progressTimeToSpawn > 0)
-        {
-            progressTimeToSpawn -= Time.deltaTime;
-        }
-        else
+        progressTimeToSpawn -= Time.deltaTime;
+        if (progressTimeToSpawn < 0)
         {
             Spawn();
             progressTimeToSpawn = Random.Range(spawnRemaining - 1, spawnRemaining + 1);
@@ -76,15 +75,10 @@ public class UnitSpawner : MonoBehaviour
         }
 
         unit.transform.SetParent(transform);
+        unit.transform.localPosition = new Vector3(Random.Range(-spawningZoneX, spawningZoneX), 0, Random.Range(-spawningZoneZ, spawningZoneZ));
+
         DecideLifeLongevity(unit);
-
-        int x = Random.Range(-spawningZoneX, spawningZoneX);
-        int z = Random.Range(-spawningZoneZ, spawningZoneZ);
-
-        unit.transform.localPosition = new Vector3(0, 0, 0);
-        unit.transform.localPosition = unit.transform.localPosition + new Vector3(x, 0, z);
-
-        unitManager.AddUnit(unit.GetComponent<Unit>());
+        units.Add(unit.GetComponent<Unit>());
     }
 
     void DecideLifeLongevity(GameObject unit)
@@ -104,13 +98,17 @@ public class UnitSpawner : MonoBehaviour
         {
             timeToDestroy = Random.Range(7, 12);
         }
-
-        unit.GetComponent<Unit>().SetTimeToDestroy(timeToDestroy);
+        unit.GetComponent<Unit>().TimeToDestroy = timeToDestroy;
         unit.name = "Soldier " + timeToDestroy;
+        unit.GetComponentInChildren<TMP_Text>().text = "" + timeToDestroy;
     }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position, new Vector3(spawningZoneX, 0, spawningZoneZ));
+
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(transform.localPosition + aimCoordinates, 0.3f);
     }
 }

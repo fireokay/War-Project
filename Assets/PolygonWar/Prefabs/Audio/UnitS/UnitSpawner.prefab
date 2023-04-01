@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4266953069265919255}
   - component: {fileID: 4266953069265919253}
-  - component: {fileID: 4266953069265919254}
   m_Layer: 0
   m_Name: UnitSpawner
   m_TagString: Untagged
@@ -45,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c33da98f6ac4274c913a7091df6c797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  units: []
   unitPrefab: {fileID: 5314248676753823229, guid: 411c0439ed15348428ddcaa11e38c9bd,
     type: 3}
   unitMachineGunnerPrefab: {fileID: 5314248676753823229, guid: 9894d6758f510784294331877df00f90,
@@ -55,23 +55,6 @@ MonoBehaviour:
   spawnRemaining: 1
   spawningZoneX: 4
   spawningZoneZ: 4
-  unitManager: {fileID: 4266953069265919254}
+  unitManager: {fileID: 0}
   minDeathBorder: 5
   maxDeathBorder: 9
---- !u!114 &4266953069265919254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4266953069265919248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683cc956ccc841b448bd063f17b4dcd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  units: []
-  speed: 3
-  aimCoordinates: {x: -8.64, y: 0.5, z: -16.85}
-  aimZoneX: 9
-  aimZoneZ: 1

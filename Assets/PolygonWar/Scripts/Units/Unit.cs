@@ -17,24 +17,30 @@ public class Unit : MonoBehaviour
     [SerializeField] private CheckTriggerZone footstepsTriggerZone;
     public ParticleSystem deathParticleSystem;
     [SerializeField] public CheckTriggerZone sniperTracerTriggerZone;
+    public UnitSpawner unitSpawner;
+
     private void Start()
     {
         timeFootsteps = _timeBetweenFootsteps;
         deathParticleSystem.Stop();
+        unitSpawner = GetComponentInParent<UnitSpawner>();
+        StartCoroutine(Destroy());
+        StartMovement(unitSpawner.aimCoordinates, 2f);
     }
     private void Update()
     {
-        if (_timeBetweenFootsteps <= 0 && footstepsTriggerZone.InHearingZone && IsMoving)
-        {
-            PlayAndStopFootsteps();
-            _timeBetweenFootsteps = timeFootsteps;
-
-        }
-        else
-        {
-            _timeBetweenFootsteps -= Time.deltaTime;
-        }
+        PlayFootsteps();
     }
+
+    private void PlayFootsteps()
+    {
+        _timeBetweenFootsteps -= Time.deltaTime;
+        if (_timeBetweenFootsteps > 0) return;
+        if (!footstepsTriggerZone.InHearingZone || !IsMoving) return;
+        PlayAndStopFootsteps();
+        _timeBetweenFootsteps = timeFootsteps;
+    }
+
     public IEnumerator Move(Vector3 aimCoordinates, float speed)
     {
         IsMoving = true;
@@ -57,24 +63,27 @@ public class Unit : MonoBehaviour
         StartCoroutine(Move(aimCoordinates, speed));
     }
 
-    public void SetTimeToDestroy(float time)
-    {
-        TimeToDestroy = time;
-        gameObject.GetComponentInChildren<TextMeshPro>().text += $", d: {TimeToDestroy}";
-    }
-
     public void PlayAndStopFootsteps()
     {
         footstepsEmitter.Play();
     }
+    public void PlaySniperTracerSound() => sniperTracerEmitter.Play();
+    public void PlaySniperShotSound() => sniperShotEmitter.Play();
 
-    public void PlaySniperTracerSound()
+    public IEnumerator Destroy()
     {
-        sniperTracerEmitter.Play();
-    }
+        yield return new WaitForSeconds(TimeToDestroy);
+        if (sniperTracerTriggerZone.InHearingZone)
+        {
+            PlaySniperTracerSound();
+        }
 
-    public void PlaySniperShotSound()
-    {
-        sniperShotEmitter.Play();
+        GetComponent<ParticleSystem>().Stop();
+        deathParticleSystem.Play();
+        yield return new WaitForSeconds(1);
+        deathParticleSystem.Stop();
+        yield return new WaitForSeconds(1);
+        unitSpawner.units.Remove(this);
+        Destroy(this.gameObject);
     }
 }
